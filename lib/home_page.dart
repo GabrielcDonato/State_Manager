@@ -7,7 +7,7 @@ class HomeReactive extends Reactive<bool> {
 }
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -24,12 +24,12 @@ class _HomePageState extends State<HomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ElevatedButton(
-            child: Text("Tap reactive 1"),
+            child: const Text("Tap reactive 1"),
             onPressed: () {
               reactive1.update(!reactive1.value);
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           ReactiveBuilder<bool>(
@@ -39,25 +39,25 @@ class _HomePageState extends State<HomePage> {
                     width: 200,
                     height: 200,
                     color: Colors.green,
-                    child: Center(child: Text("Reactive 1")),
+                    child: const Center(child: Text("Reactive 1")),
                   )
                 : Container(
                     width: 200,
                     height: 200,
                     color: Colors.red,
-                    child: Center(child: Text("Reactive 1")),
+                    child: const Center(child: Text("Reactive 1")),
                   ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           ElevatedButton(
-            child: Text("Tap reactive 2"),
+            child: const Text("Tap reactive 2"),
             onPressed: () {
               reactive2.update(!reactive2.value);
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           ReactiveBuilder<bool>(
@@ -67,13 +67,13 @@ class _HomePageState extends State<HomePage> {
                     width: 100,
                     height: 100,
                     color: Colors.blue,
-                    child: Center(child: Text("Reactive 2")),
+                    child: const Center(child: Text("Reactive 2")),
                   )
                 : Container(
                     width: 100,
                     height: 100,
                     color: Colors.yellow,
-                    child: Center(child: Text("Reactive 2")),
+                    child: const Center(child: Text("Reactive 2")),
                   ),
           ),
         ],

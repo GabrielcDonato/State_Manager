@@ -31,7 +31,7 @@ class HomeController extends Reactive<int> {
 }
 
 class HomePage2 extends StatefulWidget {
-  HomePage2({Key? key}) : super(key: key);
+  const HomePage2({Key? key}) : super(key: key);
 
   @override
   _HomePage2State createState() => _HomePage2State();
